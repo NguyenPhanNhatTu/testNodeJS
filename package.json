@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "beautiful":  "prettier --single-quote --trailing-comma all --write src/**/*.{js,json,scss}",
+    "beautiful": "prettier --single-quote --trailing-comma all --write src/**/*.{js,json,scss}",
     "beautifulgit": "lint-staged",
     "start": "nodemon --inspect src/index.js",
     "watch": "node-sass -w src/resources/scss/app.scss src/public/css/app.css",
@@ -23,17 +23,18 @@
     "url": "https://github.com/NguyenPhanNhatTu/testNodeJS/issues"
   },
   "homepage": "https://github.com/NguyenPhanNhatTu/testNodeJS#readme",
-  "husky":{
-    "hook":{
-      "pre-commit":"line-staged"
+  "husky": {
+    "hook": {
+      "pre-commit": "line-staged"
     }
   },
   "lint-staged": {
-      "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --write"
-    },
+    "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --write"
+  },
   "dependencies": {
     "express-handlebars": "^5.2.1",
-    "mongoose": "^5.12.2"
+    "mongoose": "^5.12.2",
+    "mongoose-slug-generator": "^1.0.4"
   },
   "devDependencies": {
     "express": "^4.17.1",

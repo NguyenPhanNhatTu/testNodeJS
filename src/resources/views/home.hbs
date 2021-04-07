@@ -4,10 +4,15 @@
         {{#each courses}}
         <div class="col-sm-6 col-lg-4">
             <div class="card card-couse-item" style="width: 18rem;">
+            <a href="/courses/{{this.slug}}">
+                    <img class="card-img-top" src="{{this.image}}" alt="{{this.name}}">
+            </a>
             <div class="card-body">
-                <img class="card-img-top" src="{{this.image}}" alt="{{this.name}}">
-                <h5 class="card-title">{{this.name}}</h5>
+                <a href="/courses/{{this.slug}}">
+                    <h5 class="card-title">{{this.name}}</h5>
+                </a>
                 <p class="card-text">{{this.decriptions}}</p>
+                <a href="" class="btn btn-primary">Mua Khóa Học</a>
             </div>
             </div>  
         </div>
