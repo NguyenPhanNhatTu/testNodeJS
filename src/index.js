@@ -1,7 +1,8 @@
 const express = require('express');
-var path = require('path');
+const path = require('path');
 const morgan = require('morgan');
 const handlebars = require('express-handlebars');
+const methodOverride = require('method-override')
 const app = express();
 const port = 3000;
 const route = require('./routes');
@@ -18,11 +19,15 @@ app.use(express.json());
 //app.use(express.static(__dirname + '/public'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(morgan('combined'));
+app.use(methodOverride('_method'));
 //Template engine
 app.engine(
   'hbs',
   handlebars({
     extname: '.hbs',
+    helpers: {
+      sum: (a,b) => a + b,
+    }
   }),
 );
 
