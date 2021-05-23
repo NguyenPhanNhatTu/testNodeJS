@@ -6,17 +6,17 @@ const methodOverride = require('method-override')
 const app = express();
 const port = 3000;
 const route = require('./routes');
-const db= require('./config/db');
+const db= require('./config/db/index');
+const dbAWS= require('./config/db/indexAws');
 //connnect 
 db.connect();
-
+dbAWS.connectAWS();
 app.use(
   express.urlencoded({
     extended: true,
   }),
 );
 app.use(express.json());
-//app.use(express.static(__dirname + '/public'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(morgan('combined'));
 app.use(methodOverride('_method'));

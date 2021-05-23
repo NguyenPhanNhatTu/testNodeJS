@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const awsVar = require('aws-sdk');
 const Schema = mongoose.Schema;
 const slug = require('mongoose-slug-generator');
 const mongooseDelete = require('mongoose-delete');
