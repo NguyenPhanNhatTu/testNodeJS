@@ -11,7 +11,7 @@ cd /home/ubuntu/file/ec-2021
 yarn
 
 # Build docker image
-sudo docker build -t lambiengcode/ec-b010 .
+sudo docker build -t lambiengcode/dtdm-02.
 
 # Run docker container
-sudo docker run -d --name ec-b010 -p 8080:8080 --env-file .env lambiengcode/ec-b010:latest
+sudo docker run -d --name dtdm-02 -p 8080:8080 --env-file .env lambiengcode/ec-b010:latest
