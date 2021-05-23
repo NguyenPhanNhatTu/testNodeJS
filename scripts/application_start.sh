@@ -14,4 +14,4 @@ yarn
 sudo docker build -t duynao4/dtdm-02 .
 
 # Run docker container
-sudo docker run -d --name dtdm-02 -p 8080:8080 --env-file .env duynao4/ec-b010:latest
+sudo docker run -d --name dtdm-02 -p 3000:3000 duynao4/ec-b010:latest
