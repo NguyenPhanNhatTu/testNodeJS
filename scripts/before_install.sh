@@ -5,4 +5,3 @@ if [ -d "$DIR" ]; then
 else
   echo "Creating ${DIR} directory"
   sudo mkdir ${DIR}
-fi
