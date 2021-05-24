@@ -9,7 +9,7 @@ cd /home/ubuntu/file/ec-2021
 
 # Build docker image
 echo "build docker image..."
-sudo docker build -t duynao4/dtdm-02 .
+sudo docker build -t duynao4/dtdm-02:latest .
 
 # Run docker container
 sudo docker rm dtdm-02
