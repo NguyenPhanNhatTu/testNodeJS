@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const path = require('path');
 const morgan = require('morgan');
 const handlebars = require('express-handlebars');
@@ -16,6 +17,9 @@ app.use(
     extended: true,
   }),
 );
+
+app.use(cors());
+app.use(morgan());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(morgan('combined'));
