@@ -1,2 +1,2 @@
 echo "kill all image and container..."
-sudo docker rm dtdm-02
+sudo docker rm -f dtdm-02
